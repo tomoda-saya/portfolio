@@ -1,0 +1,140 @@
+body{
+    background-color: rgb(230, 230, 230);
+    font-family: kozuka-gothic-pr6n, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+}
+
+header{
+    position: fixed;
+    background-color: white;
+    opacity: 0.9;
+    height: 5vw;
+    width: 100%;
+    z-index: 99999;
+}
+
+.aikon{
+    display: flex;
+    margin-top: 1.5vw;
+    margin-left: 7vw;
+}
+
+h1{
+    font-family: homemade-apple-pro, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4vw;
+    margin: -1vw;
+    margin-left: 22vw;
+}
+
+.a1{
+    display: flex;
+    flex-flow: column;
+    width: 3.5%;
+    height: 3.5%;
+}
+
+.a1_1{
+    display: flex;
+    flex-flow: column;
+    width: 12%;
+    padding: 0.5vw 0vw 0vw 0.5vw;
+}
+
+.a1_2{
+   height: 11.5%;
+    width: 11.5%;
+    padding: 0.5vw 0vw 0vw 0vw;
+}
+
+.a1_class{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.img,.img1{
+    display: flex;
+    flex-flow: column;
+    width: 75%;
+    padding-left: 2vw;
+}
+
+.img1:hover{
+    filter:opacity(70%);
+    transition : .3s;
+}
+
+.td_text{
+    padding-left: 1vw;
+    font-size: 1vw;
+    font-weight: 400;
+}
+
+td{
+    background-color: white;
+    width: 21vw;
+    height: 21vw;
+}
+
+table{
+    border-collapse:separate;
+    border-spacing:0.8vw 1.3vw;
+    margin-left: 6vw;
+    margin-top: 13vw;
+}
+
+.pop{
+    width: 50%;
+    margin: 0.5vw 0vw 0vw 4.7vw;
+}
+
+/* ポップアップ */
+
+.open {
+	cursor:pointer; /* マウスオーバーでカーソルの形状を変えることで、クリックできる要素だとわかりやすいように */
+}
+#pop-up,#pop-up2,#pop-up3{
+	display: none; /* label でコントロールするので input は非表示に */
+}
+.overlay {
+	display: none; /* input にチェックが入るまでは非表示に */
+}
+#pop-up:checked + .overlay, #pop-up2:checked + .overlay, #pop-up3:checked + .overlay{
+	display: block;
+	z-index: 9999;
+	background-color: #00000070;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+.window {
+	width: 40vw;
+	max-width: 20vw;
+	height: 39vw;
+	background-color: #ffffff;
+	border-radius: 6px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.text {
+	margin:0;
+}
+.close {
+	cursor:pointer;
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	font-size: 20px;
+}
